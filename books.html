@@ -1,0 +1,476 @@
+<link rel="stylesheet" href="styles/index.css">
+<link rel="stylesheet" href="styles/online.css">
+<link rel="stylesheet" href="styles/books.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  >
+   
+  <!-- Topbar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> <a href="tel:+9014331089" style="color: white; text-decoration: underline;">+91 9014331089</a></span>
+            <span><i class="fa-solid fa-envelope"></i> <a href="mailto:muddampoojitha43@gmail.com" style="color: white; text-decoration: underline;">muddampoojitha43@gmail.com</a></span>
+            
+        </div>
+        <div class="social-icons">
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    
+      
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           
+            
+        </div>
+    </div>
+</div>
+
+
+  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <title>Courses</title>
+   
+   
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-removebg-preview.png" alt="Restaurant Logo">
+                </a>
+            </div>
+
+            <!-- Hamburger Icon (Only visible on small devices) -->
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav id="nav-menu">
+                <ul class="menu">
+                    <li class="menu-item1">
+                       <a href="index.html">Home</a>
+                       
+                        
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="about.html">About Us</a>
+                       
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="course.html">Courses</a>
+                        <span class="toggle-dropdown">
+                          
+                          
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="online.html"  target="_blank">Artificial Intelligence</a></li>
+                            <li><a href="online.html" target="_blank">Cybersecurity</a></li>
+                            <li><a href="online.html" target="_blank">Cloud Computing</a></li>
+                            <li>   <a href="online.html" target="_blank">Graphic Design</a></li>
+                            <li>   <a href="online.html" target="_blank">Digital Marketing</a></li>
+                            <li><a href="online.html" target="_blank">Video Editing</a></li>    
+                             <li> <a href="online.html" target="_blank">View More Courses</a></li>
+
+
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="events.html">Events</a>
+                       
+                        
+                    </li>
+                    
+                 
+                    
+                    <li class="menu-item1"><a href="contact.html">Contact</a></li>
+                    
+                 
+            
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+</body>
+</html>
+
+  
+
+
+
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-visible');
+        });
+
+        // Toggle dropdown menus
+        const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const dropdownMenu = toggle.nextElementSibling;
+                dropdownMenu.classList.toggle('hidden');
+                const indicator = toggle.querySelector('.indicator');
+                if (indicator.classList.contains('fa-chevron-down')) {
+                    indicator.classList.remove('fa-chevron-down');
+                    indicator.classList.add('fa-chevron-up');
+                } else {
+                    indicator.classList.remove('fa-chevron-up');
+                    indicator.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(menuItem => {
+        let link = menuItem.querySelector("a"); // Main menu link
+        let dropdown = menuItem.querySelector(".dropdown-menu");
+
+        // Toggle dropdown on click
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link navigation
+            event.stopPropagation(); // Stop the click event from bubbling up
+            closeAllDropdowns(menuItem); // Close other dropdowns
+            menuItem.classList.toggle("active"); // Toggle current dropdown
+        });
+
+        // Prevent dropdown from closing when clicking inside
+        dropdown.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    });
+
+    // Close dropdown when clicking anywhere else
+    document.addEventListener("click", function () {
+        closeAllDropdowns();
+    });
+
+    function closeAllDropdowns(except = null) {
+        menuItems.forEach(item => {
+            if (item !== except) item.classList.remove("active"); // Close other dropdowns
+        });
+    }
+});
+
+</script>
+
+
+
+
+
+
+
+
+<div class="heading">
+    <h1>Top 10 In-Demand Books We Offer</h1>
+</div>
+    <div class="course-section">
+        <div class="course-card1">
+            <img src="images/man-s-search-for-meaning-original-imah3pfvesntgb7h.webp" alt="Finance Course">
+            <div class="course-content">
+                <span class="category finance">Literature Books</span>
+                <h3>Novels for Fictional storytelling</h3>
+                <p class="price">₹799 ⭐⭐⭐⭐☆</p>
+                <p>Read classic and modern literature from top-ranked publishers and universities.</p>
+                <p class="lessons">📚 12 Lessons</p>
+                <div class="add">
+                    <button>premium </button>
+                    <button>Best seller</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-card1">
+            <img src="images/secondary-school-mathematics-for-class-11-r-s-aggarwal-cbse-original-imah4fvffbufycr2.webp" alt="Electronics Course">
+            <div class="course-content">
+                <span class="category electronics">Educational & Academic Books</span>
+                <h3>Textbooks Used in schools and colleges</h3>
+                <p class="price">₹799 ⭐⭐⭐⭐☆</p>
+                <p>Used in leading universities like Harvard, MIT, and Oxford.</p>
+                <p class="lessons">📚 14 Lessons</p>
+                <div class="add">
+                    <button>premium</button>
+                    <button>Best seller</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="course-card1">
+            <img src="images/ramayan-retold-with-scientific-evidence-in-english-medium-original-imah4uwzpumhghph.webp" alt="Copywriting Course">
+            <div class="course-content">
+                <span class="category copywriting">Religious & Spiritual Books</span>
+                <h3>Bhagavad Gita, Ramayana, Mahabharata</h3>
+                <p class="price">₹799 ⭐⭐⭐⭐☆ </p>
+                <p>Referenced in theology and philosophy courses at prestigious institutions.</p>
+                <p class="lessons">📚 14 Lessons</p>
+                <div class="add">
+                    <button>premium</button>
+                    <button>Best seller</button>
+                  </div>
+            </div>
+        </div>
+           <div class="course-card1">
+            <img src="images/the-secret-original-imag4hh4daxxrey4.webp" alt="Finance Course">
+            <div class="course-content">
+                <span class="category finance">Self-Help & Personal Development</span>
+                <h3> Personal Development For Success and motivation books</h3>
+                <p class="price">₹799 ⭐⭐⭐⭐☆</p>
+                <p>Recommended by business schools and leadership programs.</p>
+                <p class="lessons">📚 12 Lessons</p>
+                <div class="add">
+                    <button>premium</button>
+                    <button>Best seller</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Courses -->
+    <div class="course-section hidden-courses">
+        <div class="course-card1">
+            <img src="images/software-process-project-management-for-jntu-h-18-course-iv-i-original-imag9h5gejdjpuwm.webp" alt="Graphic Design">
+            <div class="course-content">
+                <span class="category design">Technical & Professional Books</span>
+                <h3>Professional Books courses at top-ranked universities.</h3>
+                <p class="price">₹799 ⭐⭐⭐⭐⭐</p>
+                <p>Followed in engineering, medical, and management courses at top-ranked universities.</p>
+                <p class="lessons">📚 16 Lessons</p>
+                
+                
+                <div class="add">
+                    <button>premium</button>
+                    <button>Best seller</button>
+                  </div>
+                  
+            </div>
+        </div>
+
+        <div class="course-card1">
+            <img src="images/a-complete-biography-of-bhagat-singh-original-imag4ygygzkhard5.webp" alt="Digital Marketing">
+            <div class="course-content">
+                <span class="category marketing">History & Biographies</span>
+                <h3>Biographies  as academic references</h3>
+                <p class="price">₹799 ⭐⭐⭐⭐⭐</p>
+                <p>Used as academic references in world-class history programs.</p>
+                <p class="lessons">📚 18 Lessons</p>
+                <div class="add">
+                    <button>premium</button>
+                    <button>Best seller</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="course-card1">
+            <img src="images/business1.jpg" alt="Data Science">
+            <div class="course-content">
+                <span class="category data">Business & Finance Books</span>
+                <h3>Business & Finance Books in Ivy League MBA programs</h3>
+                <p class="price">₹799⭐⭐⭐⭐⭐</p>
+                <p>Master Recommended in Ivy League MBA programs</p>
+                <p class="lessons">📚 20 Lessons</p>
+                <div class="add">
+                    <button>premium</button>
+                    <button>Best seller</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="course-card1">
+            <img src="images/mastering1.jpg" alt="Coding">
+            <div class="course-content">
+                <span class="category coding"> Digital Resources </span>
+                <h3>Digital Resources for E-books, audiobooks, and online journals </h3>
+                <p class="price">₹799 ⭐⭐⭐⭐☆ </p>
+                <p>E-books, audiobooks, and online journals from top educational platforms and libraries.</p>
+                <p class="lessons">📚 15 Lessons</p>
+                <div class="add">
+                    <button>premium</button>
+                    <button>Best seller</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="course-card1">
+            <img src="images/universal1.jpg" alt="SEO">
+            <div class="course-content">
+                <span class="category seo"> Philosophy & Ethics Books</span>
+                <h3>Ethics Books for philosophy and ethics courses. </h3>
+                <p class="price">₹799 ⭐⭐⭐⭐☆ </p>
+                <p>Essential readings in Ivy League philosophy and ethics courses.</p>
+                <p class="lessons">📚 12 Lessons</p>
+                <div class="add">
+                    <button>premium</button>
+                    <button>Best seller</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="course-card1">
+            <img src="images/chemistry-an-introduction-for-medical-and-health-sciences-original-imafe3pfzbzk8nyf.webp" alt="Business">
+            <div class="course-content">
+                <span class="category business">Medical & Health Science Books</span>
+                <h3>Medical & Health Science Books for medical schools worldwide.</h3>
+                <p class="price">₹799 ⭐⭐⭐⭐⭐ </p>
+                <p>Standard textbooks in medical schools worldwide.</p>
+                <p class="lessons">📚 22 Lessons</p>
+                <div class="add">
+                    <button>premium</button>
+                  <button>Best seller</button>
+                  </div>
+            </div>
+        </div>
+        <div class="course-card1">
+          <img src="images/the-india-way-original-imaftx5bzceaee8g.webp" alt="Business">
+          <div class="course-content">
+              <span class="category business">Political Science</span>
+              <h3>Political Science Used in governance</h3>
+              <p class="price">₹799 ⭐⭐⭐⭐⭐ </p>
+              <p>Used in governance, diplomacy, and political theory courses.</p>
+              <p class="lessons">📚 22 Lessons</p>
+              <div class="add">
+                <button>premium</button>
+                <button>Best seller</button>
+                </div>
+          </div>
+      </div>
+      <div class="course-card1">
+        <img src="images/quantum-physics-and-the-power-of-the-mind-original-imaghjvvydgghusu.webp" alt="Business">
+        <div class="course-content">
+            <span class="category business">Astronomy</span>
+            <h3>Astronomy  programs at MIT</h3>
+            <p class="price">₹799 ⭐⭐⭐⭐⭐ </p>
+            <p> Studied in astrophysics programs at MIT, Caltech, and NASA.</p>
+            <p class="lessons">📚 22 Lessons</p>
+            <div class="add">
+                <button>premium</button>
+                <button>Best seller</button>
+              </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- View More Button -->
+    <div class="view-more-container">
+        <button id="viewMoreBtn">View All Courses</button>
+    </div>
+
+    <script>document.getElementById("viewMoreBtn").addEventListener("click", function() {
+      let hiddenCourses = document.querySelector(".hidden-courses");
+      if (hiddenCourses.style.display === "none" || hiddenCourses.style.display === "") {
+          hiddenCourses.style.display = "flex";
+          this.textContent = "Show Less";
+      } else {
+          hiddenCourses.style.display = "none";
+          this.textContent = "View All Courses";
+      }
+  });
+  </script>
+</body>
+</html>
+
+
+
+
+
+ 
+<footer class="footer">
+    <div class="container">
+      <div class="footer-section">
+     <img src="images/logo.png" alt="Logo" class="logo"> <!-- Add your logo here -->
+        <p>In today's digital world, Avinya is revolutionizing online education by offering flexible, accessible, and high-quality learning experiences Whether you're a student, professional, or lifelong learner, Avinya provides a diverse range of courses tailored to your needs.</p>
+        <div class="social-icons2">
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+         
+         
+          <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        
+        
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="index.html" class="fot"><p>HOME</p></a>
+        <a href="about.html" class="fot"><p>ABOUT US</p></a>
+        <a href="course.html" class="fot"><p>COURSES</p></a>
+         <a href="events.html" class="fot"><p>EVENTS</p></a>
+       <a href="contact.html" class="fot"><p>CONTACT</p></a>
+      </div>
+      <div class="footer-section">
+        <h3>Our Address</h3>
+        <p>PRAJAY PRINCETON TOWERS, #502, 5th Floor, Hyderabad, Telangana-500035</p>
+        <p><i class="fa-solid fa-phone"></i> <span> +91 8247547854</span></p>
+        <p><i class="fa fa-envelope"></i> <a href="Advoize2023@gmail.com">Advoize2023@gmail.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <p>Receive the latest news from us.</p>
+        <form>
+          <input type="email" placeholder="Your Email Address" required>
+          <button type="submit">Subscribe</button>
+          <div>
+            <input type="checkbox" id="privacy" required>
+            <label for="privacy">I agree to the Privacy Policy</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright© 2025 Avinya, All rights reserved. Powered by Advoize. </p>
+     
+      
+    </div>
+  </footer>
+  </body>
+  </html>
+
+
+
+
+
+
+  

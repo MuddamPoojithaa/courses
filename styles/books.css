@@ -1,0 +1,407 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* Slider Container */
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+/* Slides */
+.image-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Active Slide */
+.image-slide.active {
+    opacity: 1;
+}
+
+/* Slide Images */
+.image-slide img {
+    width: 28%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 200px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Image Hover Effect */
+.image-slide img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Content Section */
+.slide-content {
+    width: 43%;
+    padding: 20px;
+    margin-left: 100px;
+    text-align: left;
+    
+    
+    color: black;
+    border-radius: 10px;
+    animation: slideIn 1s ease-in-out;
+    transition: transform 0.8s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Content Hover Effect */
+.slide-content:hover {
+    transform: translateX(10px);
+}
+
+/* Text Styling */
+.slide-content p {
+    padding-top: 15px;
+}
+
+/* Button */
+.action-btn {
+    display: inline-block;
+    background: linear-gradient(to right, #1e88e5, #1565c0);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.action-btn:hover {
+    background: #2d1a6a;
+    transform: scale(1.05);
+}
+
+/* Navigation Buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    background: none;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Arrow Hover Effect */
+.previous-slide:hover, .next-slide:hover {
+    transform: translateY(-50%) scale(1.1);
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.previous-slide { left: 20px; }
+.next-slide { right: 20px; }
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-In Animation for Content */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .image-slider {
+        height: 400px;
+    }
+
+    .image-slide img {
+        width: 30%;
+        margin-left: 100px;
+    }
+
+    .slide-content {
+        width: 50%;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-slider {
+        height: 350px;
+    }
+
+    .image-slide {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image-slide img {
+        width: 70%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .slide-content {
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .action-btn {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .slider-button {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-slider {
+        height: 300px;
+    }
+
+    .image-slide img {
+        width: 80%;
+    }
+
+    .slide-content {
+        width: 90%;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    min-height: 200vh;
+  }
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background-color: white;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 0.8s ease-out;
+  }
+  .hero-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .hero-text {
+    max-width: 50%;
+  }
+  .hero-text h1 {
+    font-size: 38px;
+    color: #333;
+    font-family:'Roboto', 'Helvetica Neue';
+  }
+  .hero-text p {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-family: 'Roboto', 'Helvetica Neue';
+    color: #666;
+    font-size: 19px;
+    font-weight:300;
+  }
+  .hero-text ul {
+    margin: 20px 0;
+    list-style: none;
+  }
+  .hero-text ul li {
+    padding-left: 1.5em;
+    margin: 10px 0;
+    position: relative;
+    font-size: 19px;
+    font-weight:300;
+    line-height: 1.5;
+    font-family: 'Roboto', 'Helvetica Neue';
+    color: #555;
+  }
+  .hero-text ul li::before {
+    content: "•";
+    color: #1e88e5;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, #1e88e5, #1565c0);
+    color: white;
+    padding: 14px 35px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  .cta-button:hover {
+    background-color: #FF6699;
+    transform: translateY(-5px);
+  }
+  .hero-image img {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 12px;
+    margin-right: 80px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-text {
+      max-width: 100%;
+    }
+    .hero-image {
+      margin-top: 20px;
+    }
+  }
+.course-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top:20px;
+}
+
+.course-card1 {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.course-card1:hover {
+    transform: translateY(-5px);
+}
+
+.course-card1 img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.course-content {
+    padding: 15px;
+}
+
+.category {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+}
+.course-content span{
+   
+    
+font-size: 16px;
+    
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background */
+    color: #fff;
+    padding: 10px;
+
+  
+    
+    backdrop-filter: blur(5px); /* Add blur effect */
+}
+
+
+
+h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.price {
+    font-weight: bold;
+    color:black;
+    margin: 5px 0;
+}
+
+.lessons {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+
+.hidden-courses {
+    display: none;
+}
+
+
+.view-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#viewMoreBtn {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#viewMoreBtn:hover {
+    background-color: #005f8a;
+}
+.add button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: linear-gradient(to right, #42a5f5, #1e88e5);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  .heading h1{
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  html, body {
+    overflow-x: hidden;
+}

@@ -1,0 +1,606 @@
+<link rel="stylesheet" href="styles/index.css">
+<link rel="stylesheet" href="styles/online.css">
+<link rel="stylesheet" href="styles/about.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  >
+
+
+  
+  <!-- Topbar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> <a href="tel:+9014331089" style="color: white; text-decoration: underline;">+91 9014331089</a></span>
+            <span><i class="fa-solid fa-envelope"></i> <a href="mailto:muddampoojitha43@gmail.com" style="color: white; text-decoration: underline;">muddampoojitha43@gmail.com</a></span>
+            
+        </div>
+        <div class="social-icons">
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    
+      
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           
+            
+        </div>
+    </div>
+</div>
+
+
+  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <title>Courses</title>
+   
+   
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-removebg-preview.png" alt="Restaurant Logo">
+                </a>
+            </div>
+
+            <!-- Hamburger Icon (Only visible on small devices) -->
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav id="nav-menu">
+                <ul class="menu">
+                    <li class="menu-item1">
+                       <a href="index.html">Home</a>
+                       
+                        
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="about.html">About Us</a>
+                       
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="course.html">Courses</a>
+                        <span class="toggle-dropdown">
+                          
+                          
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="online.html"  target="_blank">Artificial Intelligence</a></li>
+                            <li><a href="online.html" target="_blank">Cybersecurity</a></li>
+                            <li><a href="online.html" target="_blank">Cloud Computing</a></li>
+                            <li>   <a href="online.html" target="_blank">Graphic Design</a></li>
+                            <li>   <a href="online.html" target="_blank">Digital Marketing</a></li>
+                            <li><a href="online.html" target="_blank">Video Editing</a></li>    
+                             <li> <a href="online.html" target="_blank">View More Courses</a></li>
+
+
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="events.html">Events</a>
+                       
+                        
+                    </li>
+                    
+                 
+                    
+                    <li class="menu-item1"><a href="contact.html">Contact</a></li>
+                    
+                 
+            
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+</body>
+</html>
+
+  
+
+
+
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-visible');
+        });
+
+        // Toggle dropdown menus
+        const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const dropdownMenu = toggle.nextElementSibling;
+                dropdownMenu.classList.toggle('hidden');
+                const indicator = toggle.querySelector('.indicator');
+                if (indicator.classList.contains('fa-chevron-down')) {
+                    indicator.classList.remove('fa-chevron-down');
+                    indicator.classList.add('fa-chevron-up');
+                } else {
+                    indicator.classList.remove('fa-chevron-up');
+                    indicator.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(menuItem => {
+        let link = menuItem.querySelector("a"); // Main menu link
+        let dropdown = menuItem.querySelector(".dropdown-menu");
+
+        // Toggle dropdown on click
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link navigation
+            event.stopPropagation(); // Stop the click event from bubbling up
+            closeAllDropdowns(menuItem); // Close other dropdowns
+            menuItem.classList.toggle("active"); // Toggle current dropdown
+        });
+
+        // Prevent dropdown from closing when clicking inside
+        dropdown.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    });
+
+    // Close dropdown when clicking anywhere else
+    document.addEventListener("click", function () {
+        closeAllDropdowns();
+    });
+
+    function closeAllDropdowns(except = null) {
+        menuItems.forEach(item => {
+            if (item !== except) item.classList.remove("active"); // Close other dropdowns
+        });
+    }
+});
+
+</script>
+
+
+
+
+<div class="image-slider">
+  <div class="image-slide active">
+      <img src="images/home-five-slide-img-comp-removebg-preview.png" alt="Slide 1">
+      <div class="slide-content">
+          <h2>We Are Among The Top 10 in United Kingdom</h2>
+          <p>Awarded by Euro Educational Agency in 2024.</p>
+          <a href="#" class="action-btn">Learn More</a>
+      </div>
+  </div>
+
+  <div class="image-slide">
+      <img src="images/beautiful-woman-with-pen-book-isolated-white_359031-2810.jpg" alt="Slide 2">
+      <div class="slide-content">
+          <h2>Transforming Education for a Better Future</h2>
+          <p>Join us to make a difference in learning.</p>
+          <a href="#" class="action-btn">Join Now</a>
+      </div>
+  </div>
+
+  <div class="image-slide">
+      <img src="images/young-blonde-girl-white-background-wearing-black-jacket_357619-545.avif" alt="Slide 3">
+      <div class="slide-content">
+          <h2>Excellence in Academic Achievements</h2>
+          <p>Our students are recognized globally.</p>
+          <a href="#" class="action-btn">Explore More</a>
+      </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button class="slider-button previous-slide" onclick="changeSlide(-1)">❮</button>
+  <button class="slider-button next-slide" onclick="changeSlide(1)">❯</button>
+</div>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".image-slide");
+  
+  function changeSlide(step) {
+      slides[slideIndex].classList.remove("active");
+      slideIndex = (slideIndex + step + slides.length) % slides.length;
+      slides[slideIndex].classList.add("active");
+  }
+  
+  // Auto-slide every 4 seconds
+  setInterval(() => changeSlide(1), 6000);
+  
+  // Initial display
+  slides[slideIndex].classList.add("active");
+</script>
+
+
+
+
+
+
+
+
+
+<section class="parallax-section">
+  <div class="parallax-content">
+     
+      
+     
+    
+      <p>Limited spots available! Enroll now and start your journey toward success!".</p>
+      <a href="course.html" class="learn-more-btn">Learn More</a>
+  </div>
+</section>
+
+<script>document.addEventListener("DOMContentLoaded", () => {
+const parallaxSection = document.querySelector(".parallax-section");
+const parallaxContent = document.querySelector(".parallax-content");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              parallaxContent.classList.add("visible");
+          }
+      });
+  },
+  {
+      threshold: 0.5, // Trigger when 50% of the section is visible
+  }
+);
+
+observer.observe(parallaxSection);
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero-section">
+  <div class="hero-text">
+    <h1>Learn new personal & professional skills online</h1>
+    <p>
+      In today's fast-paced world, staying competitive and constantly learning is essential for personal and professional growth. Whether you're looking to acquire a new hobby, improve soft skills, or stay updated with industry-specific knowledge, online learning provides flexibility and endless opportunities.
+    </p>
+    <ul>
+      <li>Master in-demand technical skills such as coding, data analytics, and digital marketing.</li>
+      <li>Stay updated with industry trends to remain competitive in the job market.</li>
+      <li>Boost your career with leadership, communication, and also project management skills</li>
+    </ul>
+    <a href="#" class="cta-button">Start Learning Now</a>
+  </div>
+  <div class="hero-image">
+    <img src="images/home-five-slide-img-comp-removebg-preview.png" alt="Student holding a book">
+  </div>
+</section>
+
+<script>
+  // Intersection Observer for triggering animations on scroll
+  document.addEventListener("DOMContentLoaded", function () {
+    const heroSection = document.querySelector(".hero-section");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    heroSection.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.3 } // Triggers when 30% of the section is visible
+    );
+
+    observer.observe(heroSection);
+});
+
+</script>
+
+
+
+<section class="service-container">
+  <div class="service-box">
+      <div class="service-icon">
+          <i class="fas fa-graduation-cap"></i>
+      </div>
+      <h3 class="service-title">Online Course</h3>
+      <p class="service-text">Adipiscing turpis nullam lacinia mi pretium cras sollicitudin quam facilisi.</p>
+  </div>
+  <div class="service-box">
+      <div class="service-icon">
+          <i class="fas fa-user-tie"></i>
+      </div>
+      <h3 class="service-title">Career Mentoring</h3>
+      <p class="service-text">Adipiscing turpis nullam lacinia mi pretium cras sollicitudin quam facilisi.</p>
+  </div>
+  <div class="service-box">
+      <div class="service-icon">
+          <i class="fas fa-video"></i>
+      </div>
+      <h3 class="service-title">Live Webinar</h3>
+      <p class="service-text">Adipiscing turpis nullam lacinia mi pretium cras sollicitudin quam facilisi.</p>
+  </div>
+  <div class="service-box">
+      <div class="service-icon">
+          <i class="fas fa-certificate"></i>
+      </div>
+      <h3 class="service-title">Certification</h3>
+      <p class="service-text">Adipiscing turpis nullam lacinia mi pretium cras sollicitudin quam facilisi.</p>
+  </div>
+</section>
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+    const serviceSection = document.querySelector(".service-container");
+    const serviceBoxes = document.querySelectorAll(".service-box");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    serviceSection.classList.add("animate");
+                    serviceBoxes.forEach((box, index) => {
+                        setTimeout(() => {
+                            box.classList.add("animate");
+                        }, index * 200); // Staggered animation
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    observer.observe(serviceSection);
+});
+
+
+</script>
+
+
+
+
+
+
+  
+  
+
+
+    <section class="edu-section">
+        <div class="edu-image">
+            <img src="images/img_1.png" alt="Teacher">
+        </div>
+        <div class="edu-content">
+            <h5 class="edu-heading">OUR POPULAR CLASSES</h5>
+            <h2 class="edu-title">It's The Bright One, It's The Right One, That's Education.</h2>
+            <p class="edu-text">Avinya is revolutionizing online education by offering flexible, accessible, and high-quality learning experiences Whether you're a student, professional, or lifelong learner, Avinya provides a diverse range of courses tailored to your needs..</p>
+            
+            <div class="edu-courses">
+                <ul class="edu-list">
+                    <li class="edu-item">✔ Business Management</li>
+                    <li class="edu-item">✔ Arts & Design</li>
+                    <li class="edu-item">✔ Business & Finance</li>
+                    <li class="edu-item">✔ Data Science</li>
+                </ul>
+                <ul class="edu-list">
+                    <li class="edu-item">✔ Computer Science</li>
+                    <li class="edu-item">✔ Personal Development</li>
+                    <li class="edu-item">✔ Marketing</li>
+                    <li class="edu-item">✔ Video & Photography</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".edu-section");
+
+    function revealSection() {
+        const sectionPos = section.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+        
+        if (sectionPos < screenHeight * 0.8) {
+            section.classList.add("show");
+        }
+    }
+
+    window.addEventListener("scroll", revealSection);
+    revealSection();
+});
+
+   </script>
+   
+   <section class="subscribe-section">
+    <div class="subscribe-container">
+        <div class="subscribe-text">
+            <h2>Stay <span>Updated</span> with Our <span>Latest Courses & Insights</span></h2>
+            <p>Subscribe to receive exclusive updates, special offers, and educational content.</p>
+            <div class="subscribe-input">
+                <input type="email" id="email" placeholder="Enter your email">
+                <button onclick="validateEmail()">Subscribe</button>
+            </div>
+        </div>
+        <div class="subscribe-image">
+            <img src="images/beautiful-woman-with-pen-book-isolated-white_359031-2810-removebg-preview.png" alt="Student">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<div class="heading">
+  <h1>Here Top In-Demand Courses We Offer</h1>
+</div>
+  <div class="course-section">
+      <div class="course-card">
+          <img src="images/web.jpg" alt="Finance Course">
+          <div class="course-content">
+              <span class="category finance">HTML & CSS</span>
+              <h3>HTML, CSS for Web Design Fundamentals</h3>
+              <p class="price">₹799 ⭐⭐⭐⭐☆</p>
+              <p>Learn HTML, CSS  from a top-ranked university.</p>
+              <p class="lessons">📚 12 Lessons</p>
+              <div class="add">
+                  <button>premium </button>
+                  <button>Best seller</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="course-card">
+          <img src="images/java.avif" alt="Electronics Course">
+          <div class="course-content">
+              <span class="category electronics">JavaScript</span>
+              <h3>JavaScript for Dynamic Web Development</h3>
+              <p class="price">₹799 ⭐⭐⭐⭐☆</p>
+              <p>Understand the basics of JavaScript Zero to Pro.</p>
+              <p class="lessons">📚 14 Lessons</p>
+              <div class="add">
+                  <button>premium</button>
+                  <button>Best seller</button>
+                </div>
+          </div>
+      </div>
+
+      <div class="course-card">
+          <img src="images/full stack.jpg" alt="Copywriting Course">
+          <div class="course-content">
+              <span class="category copywriting">Full-Stack Development</span>
+              <h3>Full-Stack Development for Comprehensive Web Solutions</h3>
+              <p class="price">₹799 ⭐⭐⭐⭐☆ </p>
+              <p>Master the Full-Stack Development for Web Application Success.</p>
+              <p class="lessons">📚 14 Lessons</p>
+              <div class="add">
+                  <button>premium</button>
+                  <button>Best seller</button>
+                </div>
+          </div>
+      </div>
+        
+      
+      
+    
+      
+    </div>
+      <div class="feature-box" style="background: none;">
+      <a href="course.html"><button>View All</button></a>
+
+</div>
+
+
+
+
+ 
+<footer class="footer">
+  <div class="container">
+    <div class="footer-section">
+   <img src="images/logo.png" alt="Logo" class="logo"> <!-- Add your logo here -->
+      <p>In today's digital world, Avinya is revolutionizing online education by offering flexible, accessible, and high-quality learning experiences Whether you're a student, professional, or lifelong learner, Avinya provides a diverse range of courses tailored to your needs.</p>
+      <div class="social-icons2">
+        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+       
+       
+        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+      
+      
+      </div>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <a href="index.html" class="fot"><p>HOME</p></a>
+      <a href="about.html" class="fot"><p>ABOUT US</p></a>
+      <a href="course.html" class="fot"><p>COURSES</p></a>
+       <a href="events.html" class="fot"><p>EVENTS</p></a>
+     <a href="contact.html" class="fot"><p>CONTACT</p></a>
+    </div>
+    <div class="footer-section">
+      <h3>Our Address</h3>
+      <p>PRAJAY PRINCETON TOWERS, #502, 5th Floor, Hyderabad, Telangana-500035</p>
+      <p><i class="fa-solid fa-phone"></i> <span> +91 8247547854</span></p>
+      <p><i class="fa fa-envelope"></i> <a href="Advoize2023@gmail.com">Advoize2023@gmail.com</a></p>
+    </div>
+    <div class="footer-section">
+      <h3>Newsletter</h3>
+      <p>Receive the latest news from us.</p>
+      <form>
+        <input type="email" placeholder="Your Email Address" required>
+        <button type="submit">Subscribe</button>
+        <div>
+          <input type="checkbox" id="privacy" required>
+          <label for="privacy">I agree to the Privacy Policy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright© 2025 Avinya, All rights reserved. Powered by Advoize. </p>
+   
+    
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

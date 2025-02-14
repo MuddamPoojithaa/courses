@@ -1,0 +1,446 @@
+
+<link rel="stylesheet" href="styles/index.css">
+
+<link rel="stylesheet" href="nav.css">
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  >
+ 
+  
+
+ 
+    
+  <!-- Topbar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> <a href="tel:+9014331089" style="color: white; text-decoration: underline;">+91 9014331089</a></span>
+            <span><i class="fa-solid fa-envelope"></i> <a href="mailto:muddampoojitha43@gmail.com" style="color: white; text-decoration: underline;">muddampoojitha43@gmail.com</a></span>
+            
+        </div>
+        <div class="social-icons">
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    
+      
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           
+            
+        </div>
+    </div>
+</div>
+
+
+  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <title>Courses</title>
+   
+   
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-removebg-preview.png" alt="Restaurant Logo">
+                </a>
+            </div>
+
+            <!-- Hamburger Icon (Only visible on small devices) -->
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav id="nav-menu">
+                <ul class="menu">
+                    <li class="menu-item1">
+                       <a href="index.html">Home</a>
+                       
+                        
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="about.html">About Us</a>
+                       
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="course.html">Courses</a>
+                        <span class="toggle-dropdown">
+                          
+                          
+                        </span>
+                        <ul class="dropdown-menu">
+                          <li><a href="online.html"  target="_blank">Artificial Intelligence</a></li>
+                          <li><a href="online.html" target="_blank">Cybersecurity</a></li>
+                          <li><a href="online.html" target="_blank">Cloud Computing</a></li>
+                          <li>   <a href="online.html" target="_blank">Graphic Design</a></li>
+                          <li>   <a href="online.html" target="_blank">Digital Marketing</a></li>
+                          <li><a href="online.html" target="_blank">Video Editing</a></li>    
+                           <li> <a href="online.html" target="_blank">View More Courses</a></li>
+
+
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="events.html">Events</a>
+                       
+                        
+                    </li>
+                    
+                 
+                    
+                    <li class="menu-item1"><a href="contact.html">Contact</a></li>
+                    
+                 
+            
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+</body>
+</html>
+
+  
+
+
+
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-visible');
+        });
+
+        // Toggle dropdown menus
+        const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const dropdownMenu = toggle.nextElementSibling;
+                dropdownMenu.classList.toggle('hidden');
+                const indicator = toggle.querySelector('.indicator');
+                if (indicator.classList.contains('fa-chevron-down')) {
+                    indicator.classList.remove('fa-chevron-down');
+                    indicator.classList.add('fa-chevron-up');
+                } else {
+                    indicator.classList.remove('fa-chevron-up');
+                    indicator.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(menuItem => {
+        let link = menuItem.querySelector("a"); // Main menu link
+        let dropdown = menuItem.querySelector(".dropdown-menu");
+
+        // Toggle dropdown on click
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link navigation
+            event.stopPropagation(); // Stop the click event from bubbling up
+            closeAllDropdowns(menuItem); // Close other dropdowns
+            menuItem.classList.toggle("active"); // Toggle current dropdown
+        });
+
+        // Prevent dropdown from closing when clicking inside
+        dropdown.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    });
+
+    // Close dropdown when clicking anywhere else
+    document.addEventListener("click", function () {
+        closeAllDropdowns();
+    });
+
+    function closeAllDropdowns(except = null) {
+        menuItems.forEach(item => {
+            if (item !== except) item.classList.remove("active"); // Close other dropdowns
+        });
+    }
+});
+
+</script>
+
+
+
+
+
+
+
+
+    <!-- Events Section -->
+    <div class="details-box">
+        <h2>Events</h2>
+        <div class="grid-layout">
+          <div class="feature-box">
+            <a href="workshop.html"><img src="images/work.jpg" alt="Workshops"></a>
+            <p>Workshops</p>
+            <a href="workshop.html"><button>Register</button></a>
+          </div>
+          <div class="feature-box">
+           <a href="hackathons.html"> <img src="images/Hackathons.jpg" alt="Hackathons"></a>
+            <p>Hackathons</p>
+            <a href="hackathons.html"><button>Register</button></a>
+          </div>
+          <div class="feature-box">
+           <a href="networking.html"><img src="images/networking events.jpg" alt="Networking Events"></a>
+            <p>Networking Events</p>
+            <a href="networking.html"><button>Register</button></a>
+          </div>
+          <div class="feature-box">
+           <a href="conference.html"><img src="images/conferencejpg.jpg" alt="Conferences"></a>
+            <p>Conferences</p>
+            <a href="conference.html"><button>Register</button></a>
+          </div>
+          <div class="feature-box">
+           <a href="seminar.html"><img src="images/Seminars.jpg" alt="Seminars"></a>
+            <p>Seminars</p>
+            <a href="seminar.html"><button>Register</button></a>
+          </div>
+          <div class="feature-box">
+          <a href="meetups.html"><img src="images/Meetups.jpg" alt="Meetups"></a>
+            <p>Meetups</p>
+            <a href="meetups.html"> <button>Register</button></a>
+          </div>
+        </div>
+        <div class="more">
+         <a href="course.html"><center><button>
+           View All
+          </button></center></a>
+        </div>
+      </div>
+  
+    
+      
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const primarySection = document.querySelector('.primary-section');
+        const featureBoxes = document.querySelectorAll('.feature-box');
+    
+        const observerOptions = {
+          root: null, // Use the viewport as the root
+          threshold: 0.1 // Trigger when 10% of the primary section is visible
+        };
+    
+        const observerCallback = (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              featureBoxes.forEach(box => {
+                box.classList.add('animate'); // Add animation class
+              });
+              observer.unobserve(entry.target); // Stop observing once animated
+            }
+          });
+        };
+    
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        observer.observe(primarySection); // Start observing the primary section
+      });
+    </script>
+  <!-- Online Course Events List -->
+<section class="event_list section_padding section_bg_1">
+  <div class="container custom_container">
+      <div class="row justify-content-center">
+          <div class="col-lg-7">
+              <div class="section_tittle_style_02">
+                  <h2 class="title wow fadeInDown" data-wow-delay=".3s">
+                      <span class="title_overlay_effect">Upcoming Online Events</span>
+                  </h2>
+                  <p class="description wow fadeInDown" data-wow-delay=".3s">
+                    In today's digital world, Avinya is revolutionizing online education by offering flexible, accessible, and high-quality learning experiences Whether you're a student, professional, or lifelong learner, Avinya provides a diverse range of courses tailored to your needs.Enhance your skills with our expert-led online courses. Join from anywhere and learn at your convenience.
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+              <div class="single_event_list">
+                  <div class="event_list_img">
+                      <img src="images/web.jpg" alt="Web Development Course" class="img-fluid">
+                  </div>
+                  <div class="event_list_content">
+                      <h5>10 Aug</h5>
+                      <h3><a href="course_details.html">Web Development Masterclass</a></h3>
+                      <p>Learn HTML, CSS, JavaScript, and more in this hands-on web development course.</p>
+                      <ul>
+                          <li><i class="fas fa-clock"></i>Time: <span>18:00 - 20:00</span></li>
+                          <li><i class="fas fa-globe"></i>Online Platform: <span>Zoom</span></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+</div>
+
+          <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+            <div class="single_event_list">
+                <div class="event_list_img">
+                    <img src="images/data science.jpg" alt="Data Science Course" class="img-fluid">
+                </div>
+                <div class="event_list_content">
+                    <h5>15 Aug</h5>
+                    <h3><a href="course_details.html">Data Science with Python</a></h3>
+                    <p>Dive into data analysis, machine learning, and AI with Python.</p>
+                    <ul>
+                        <li><i class="fas fa-clock"></i>Time: <span>19:00 - 21:00</span></li>
+                        <li><i class="fas fa-globe"></i>Online Platform: <span>Google Meet</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         
+
+
+        <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+          <div class="single_event_list">
+              <div class="event_list_img">
+                  <img src="images/digital.jpg" alt="Digital Marketing Course" class="img-fluid">
+              </div>
+              <div class="event_list_content">
+                  <h5>20 Aug</h5>
+                  <h3><a href="course_details.html">Digital Marketing Bootcamp</a></h3>
+                  <p>Master SEO, social media marketing, and paid advertising strategies.</p>
+                  <ul>
+                      <li><i class="fas fa-clock"></i>Time: <span>17:00 - 19:00</span></li>
+                      <li><i class="fas fa-globe"></i>Online Platform: <span>Microsoft Teams</span></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+
+
+
+      
+<div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+  <div class="single_event_list">
+      <div class="event_list_img">
+          <img src="images/graphic.avif" alt="Graphic Design Course" class="img-fluid">
+      </div>
+      <div class="event_list_content">
+          <h5>25 Aug</h5>
+          <h3><a href="course_details.html">Graphic Design Essentials</a></h3>
+          <p>Learn Adobe Photoshop, Illustrator, and design principles.</p>
+          <ul>
+              <li><i class="fas fa-clock"></i>Time: <span>16:00 - 18:00</span></li>
+              <li><i class="fas fa-globe"></i>Online Platform: <span>WebinarJam</span></li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+
+</section>
+<!-- Online Course Events List End -->
+
+    
+
+ 
+ <footer class="footer">
+  <div class="container">
+    <div class="footer-section">
+   <img src="images/logo.png" alt="Logo" class="logo"> <!-- Add your logo here -->
+      <p>In today's digital world, Avinya is revolutionizing online education by offering flexible, accessible, and high-quality learning experiences Whether you're a student, professional, or lifelong learner, Avinya provides a diverse range of courses tailored to your needs.</p>
+      <div class="social-icons2">
+        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+       
+       
+        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+      
+      
+      </div>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <a href="index.html" class="fot"><p>HOME</p></a>
+      <a href="about.html" class="fot"><p>ABOUT US</p></a>
+      <a href="course.html" class="fot"><p>COURSES</p></a>
+       <a href="events.html" class="fot"><p>EVENTS</p></a>
+     <a href="contact.html" class="fot"><p>CONTACT</p></a>
+    </div>
+    <div class="footer-section">
+      <h3>Our Address</h3>
+      <p>PRAJAY PRINCETON TOWERS, #502, 5th Floor, Hyderabad, Telangana-500035</p>
+      <p><i class="fa-solid fa-phone"></i> <span> +91 8247547854</span></p>
+      <p><i class="fa fa-envelope"></i> <a href="Advoize2023@gmail.com">Advoize2023@gmail.com</a></p>
+    </div>
+    <div class="footer-section">
+      <h3>Newsletter</h3>
+      <p>Receive the latest news from us.</p>
+      <form>
+        <input type="email" placeholder="Your Email Address" required>
+        <button type="submit">Subscribe</button>
+        <div>
+          <input type="checkbox" id="privacy" required>
+          <label for="privacy">I agree to the Privacy Policy</label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright© 2025 Avinya, All rights reserved. Powered by Advoize. </p>
+   
+    
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

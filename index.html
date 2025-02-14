@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+   
+    
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/online.css">
+    <link rel="stylesheet" href="styles/about.css">
+</head>
+<body>
+  
+  
+  
+  <!-- Topbar -->
+  <div class="top-bar">
+    <div class="container">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> <a href="tel:+9014331089" style="color: white; text-decoration: underline;">+91 9014331089</a></span>
+            <span><i class="fa-solid fa-envelope"></i> <a href="mailto:muddampoojitha43@gmail.com" style="color: white; text-decoration: underline;">muddampoojitha43@gmail.com</a></span>
+            
+        </div>
+        <div class="social-icons">
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    
+      
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="" class="social-icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           
+            
+        </div>
+    </div>
+</div>
+
+
+  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <title>Courses</title>
+   
+   
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-removebg-preview.png" alt="Restaurant Logo">
+                </a>
+            </div>
+
+            <!-- Hamburger Icon (Only visible on small devices) -->
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav id="nav-menu">
+                <ul class="menu">
+                    <li class="menu-item1">
+                       <a href="index.html">Home</a>
+                       
+                        
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="about.html">About Us</a>
+                       
+                        
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="course.html">Courses</a>
+                        <span class="toggle-dropdown">
+                          
+                          
+                        </span>
+                        <ul class="dropdown-menu">
+                          <li><a href="online.html"  target="_blank">Artificial Intelligence</a></li>
+                          <li><a href="online.html" target="_blank">Cybersecurity</a></li>
+                          <li><a href="online.html" target="_blank">Cloud Computing</a></li>
+                          <li>   <a href="online.html" target="_blank">Graphic Design</a></li>
+                          <li>   <a href="online.html" target="_blank">Digital Marketing</a></li>
+                          <li><a href="online.html" target="_blank">Video Editing</a></li>    
+                           <li> <a href="online.html" target="_blank">View More Courses</a></li>
+
+
+                        </ul>
+                    </li>
+                    
+                    <li class="menu-item1">
+                        <a href="events.html">Events</a>
+                       
+                        
+                    </li>
+                    
+                 
+                    
+                    <li class="menu-item1"><a href="contact.html">Contact</a></li>
+                    
+                 
+            
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+</body>
+</html>
+
+  
+
+
+
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-visible');
+        });
+
+        // Toggle dropdown menus
+        const dropdownToggles = document.querySelectorAll('.toggle-dropdown');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const dropdownMenu = toggle.nextElementSibling;
+                dropdownMenu.classList.toggle('hidden');
+                const indicator = toggle.querySelector('.indicator');
+                if (indicator.classList.contains('fa-chevron-down')) {
+                    indicator.classList.remove('fa-chevron-down');
+                    indicator.classList.add('fa-chevron-up');
+                } else {
+                    indicator.classList.remove('fa-chevron-up');
+                    indicator.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(menuItem => {
+        let link = menuItem.querySelector("a"); // Main menu link
+        let dropdown = menuItem.querySelector(".dropdown-menu");
+
+        // Toggle dropdown on click
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link navigation
+            event.stopPropagation(); // Stop the click event from bubbling up
+            closeAllDropdowns(menuItem); // Close other dropdowns
+            menuItem.classList.toggle("active"); // Toggle current dropdown
+        });
+
+        // Prevent dropdown from closing when clicking inside
+        dropdown.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    });
+
+    // Close dropdown when clicking anywhere else
+    document.addEventListener("click", function () {
+        closeAllDropdowns();
+    });
+
+    function closeAllDropdowns(except = null) {
+        menuItems.forEach(item => {
+            if (item !== except) item.classList.remove("active"); // Close other dropdowns
+        });
+    }
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<div class="main-container">
+    <!-- Full-width Swiper Carousel -->
+    <div class="swiper main-banner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+         <a href="online.html"><img src="images/tech start 3.jpg" alt="Banner 1" /></a>
+          <div class="banner-content">
+            <h2>What You Are Looking For ?</h2>
+            <h2>Tech Startups</h2>
+            <button class="btn">Apply Now →</button>
+          </div>
+        </div>
+  
+        <div class="swiper-slide">
+         <a href="books.html"><img src="images/digital.jpg" alt="Banner 1" /></a>
+          <div class="banner-content">
+            <h2>What You Are Looking For ?</h2>
+            <h2>Digital Marketing</h2>
+            <button class="btn">Apply Now →</button>
+          </div>
+        </div>
+  
+        <div class="swiper-slide">
+         <a href="online.html" ><img src="images/career guidance.jpg" alt="Banner 2" /></a>
+          <div class="banner-content">
+            <h2>What You Are Looking For ?</h2>
+            <h2>Career & Jobs</h2>
+            <button class="btn">Get Best Quotes →</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+           <a href="skill.html"><img src="images/consul.jpg" alt="Banner 2" /></a>
+            <div class="banner-content">
+                <h2>What You Are Looking For ?</h2>
+                <h2>Business Consulting</h2>
+              <button class="btn">Get Best Quotes →</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+           <a href="online.html" ><img src="images/Freelance Jobs.jpg" alt="Banner 2" /></a>
+            <div class="banner-content">
+                <h2>What You Are Looking For ?</h2>
+                <h2>Freelance Jobs</h2>
+              <button class="btn">Get Best Quotes →</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+          <a href="books.html"><img src="images/Hackathons.jpg" alt="Banner 2" /></a>
+            <div class="banner-content">
+                <h2>What You Are Looking For ?</h2>
+                <h2>Hackathons</h2>
+              <button class="btn">Get Best Quotes →</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+           <a href="skill.html"><img src="images/young-adults-graduation-gowns-smiling-proudly-generated-by-ai.jpg" alt="Banner 1" /></a>
+            <div class="banner-content">
+              <h2>What You Are Looking For ?</h2>
+              <h2>Higher Education</h2>
+              <button class="btn">Apply Now →</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+          <a href="online.html"><img src="images/learnig.jpg" alt="Banner 1" /></a>
+            <div class="banner-content">
+              <h2>What You Are Looking For ?</h2>
+              <h2>E-Learning Platforms</h2>
+              <button class="btn">Apply Now →</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+          <a href="skill.html" ><img src="images/part time .jpg" alt="Banner 1" /></a>
+            <div class="banner-content">
+              <h2>What You Are Looking For ?</h2>
+              <h2>Part-Time Internships</h2>
+              <button class="btn">Apply Now →</button>
+            </div>
+          </div>
+      </div>
+      
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  
+      <div class="swiper-pagination"></div>
+    </div>
+  
+  
+    
+  </div>
+  
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {  // Added navigation option
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  
+  <section class="category-section">
+    <figure>
+     <a href="online.html"> <img src="images/career guidance.jpg" alt="Career Guidance"></a>
+      <figcaption>Career Guidance</figcaption>
+    </figure>
+    <figure>
+      <a href="books.html"><img src="images/career img2.jpg" alt="Higher Education"></a>
+      <figcaption>Higher Education</figcaption>
+    </figure>
+    <figure>
+    <a href="skill.html"  ><img src="images/skill development.jpg" alt="Skill Development"></a>
+      <figcaption>Skill Development</figcaption>
+    </figure>
+    <figure>
+    <a href="online.html"><img src="images/internship.jpg" alt="Internships"></a>
+      <figcaption>Internships</figcaption>
+    </figure>
+    <figure>
+    <a href="books.html"><img src="images/workshops.jpg" alt="Workshops"></a>
+      <figcaption>Workshops</figcaption>
+    </figure>
+    <figure>
+    <a href="skill.html"><img src="images/books.jpg" alt="Scholarships"></a>
+      <figcaption>Books & Resources</figcaption>
+    </figure>
+    <figure>
+      <a href="online.html"><img src="images/learnig.jpg" alt="Certifications"></a>
+      <figcaption>E-Learning Platforms</figcaption>
+    </figure>
+    <figure>
+     <a href="books.html"> <img src="images/boot camp.jpg" alt="Student Exchange"></a>
+      <figcaption>Coding Bootcamps</figcaption>
+    </figure>
+    <figure>
+      <a href="online.html"><img src="images/online education.jpg" alt="Online Courses"></a>
+      <figcaption>Online Courses</figcaption>
+    </figure>
+    <figure>
+      <a href="books.html"><img src="images/ai.jpg" alt="Test Preparation"></a>
+      <figcaption>Artificial Intelligence</figcaption>
+    </figure>
+    <figure>
+     <a href="online.html"><img src="images/test.jpg" alt="Test Preparation"></a>
+      <figcaption>Test Preparation</figcaption>
+    </figure>
+    <figure>
+    <a href="skill.html"><img src="images/data science.jpg" alt="Test Preparation"></a>
+      <figcaption>Data Science</figcaption>
+    </figure>
+    <figure>
+    <a href="books.html"> <img src="images/it .jpg" alt="Test Preparation"></a>
+      <figcaption>IT Consulting</figcaption>
+    </figure>
+    <figure>
+    <a href="online.html"><img src="images/Freelance Jobs.jpg" alt="Test Preparation"></a>
+      <figcaption>Freelance Jobs</figcaption>
+    </figure>
+   
+    
+    
+  </section>
+  
+  <script>
+    // Function to check if an element is in view
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  
+    // Function to add 'show' class to figures when in viewport
+    function handleScroll() {
+      const figures = document.querySelectorAll('.category-section figure');
+      figures.forEach(figure => {
+        if (isElementInViewport(figure)) {
+          figure.classList.add('show');
+        }
+      });
+    }
+  
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScroll);
+  
+    // Initial check if elements are in view on page load
+    window.addEventListener('load', handleScroll);
+  </script>
+
+
+
+
+
+
+
+<div class="primary-section">
+  <!-- Education Section -->
+  <div class="details-box">
+    <h2>Education</h2>
+    <div class="grid-layout">
+      <div class="feature-box">
+      <a href="online.html"  ><img src="images/learnig.jpg" alt="Online Courses"></a>
+        <p>Online Courses</p>
+       <a href="online.html"> <button>Learn More</button></a>
+      </div>
+      <div class="feature-box">
+     <a href="books.html"> <img src="images/books.jpg" alt="Books & Resources"></a>
+        <p>Books & Resources</p>
+        <a href="books.html">  <button>Learn More</button></a>
+      </div>
+      <div class="feature-box">
+        <a href="skill.html"><img src="images/skill development.jpg" alt="Skill Development"></a>
+        <p>Skill Development</p>
+        <a href="skill.html"><button>Learn More</button></a>
+      </div>
+      <div class="feature-box">
+      <a href="online.html">  <img src="images/online education.jpg" alt="E-Learning Platforms"></a>
+        <p>E-Learning Platforms</p>
+        <a href="skill.html"> <button>Learn More</button></a>
+      </div>
+      <div class="feature-box">
+       <a href="course.html"> <img src="images/boot camp.jpg" alt="Certifications"></a>
+        <p>Coding Bootcamps</p>
+        <a href="course.html">   <button>Learn More</button></a>
+      </div>
+
+      <div class="feature-box">
+       <a href="skill.html"><img src="images/workshops.jpg" alt="Workshops & Webinars"></a>
+        <p>Workshops & Webinars</p>
+        <a href="course.html"><button>Learn More</button></a>
+      </div>
+      
+    </div>
+    <div class="more">
+     <a href="course.html"  target="_blank"> <center><button>
+       View All
+      </button></center></a>
+    </div>
+  </div>
+
+  <!-- Technology Section -->
+  <div class="details-box">
+    <h2>Technology</h2>
+    <div class="grid-layout">
+      <div class="feature-box">
+        <a href= "online.html"><img src="images/ai.jpg" alt="Tech Innovations"></a>
+        <p>Artificial Intelligence</p>
+        <a href= "online.html"><button>Explore</button></a>
+      </div>
+      <div class="feature-box">
+       <a href="online.html"> <img src="images/data science.jpg" alt="Artificial Intelligence"></a>
+        <p>Data Science</p>
+        <a href="online.html"><button>Explore</button></a>
+      </div>
+      <div class="feature-box">
+      <a href="online.html">  <img src="images/Cybersecurity.jpg" alt="Blockchain"></a>
+        <p>Cybersecurity</p>
+        <a href="online.html"><button>Explore</button></a>
+      </div>
+      <div class="feature-box">
+      <a href="online.html"> <img src="images/Cloud Computing.jpg" alt="Cloud Computing"></a>
+        <p>Cloud Computing</p>
+        <a href="online.html"><button>Explore</button></a>
+      </div>
+      <div class="feature-box">
+      <a href="online.html"> <img src="images/digital.jpg" alt="Cybersecurity"></a>
+        <p>Digital Marketing</p>
+        <a href="online.html"><button>Explore</button></a>
+      </div>
+      <div class="feature-box">
+      <a href="online.html"><img src="images/IoT.jpg" alt="IoT"></a>
+        <p>IoT</p>
+        <a href="online.html"><button>Explore</button></a>
+      </div>
+    </div>
+    <div class="more">
+      <a href="course.html"  target="_blank"><center><button>
+       View All
+      </button></center></a>
+    </div>
+  </div>
+
+ 
+
+
+
+  <section class="subscribe-section">
+    <div class="subscribe-container">
+        <div class="subscribe-text">
+            <h2>Stay <span>Updated</span> with Our <span>Latest Courses & Insights</span></h2>
+            <p>Subscribe to receive exclusive updates, special offers, and educational content.</p>
+            <div class="subscribe-input">
+                <input type="email" id="email" placeholder="Enter your email">
+                <button onclick="validateEmail()">Subscribe</button>
+            </div>
+        </div>
+        <div class="subscribe-image">
+            <img src="images/beautiful-woman-with-pen-book-isolated-white_359031-2810-removebg-preview.png" alt="Student">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <!-- Jobs Section -->
+  <div class="details-box">
+    <h2>Jobs</h2>
+    <div class="grid-layout">
+      <div class="feature-box">
+      <a href="online.html"><img src="images/Part-Time Jobs.jpg" alt="Full-Time Jobs"></a>
+        <p>Full-Time Jobs</p>
+        <a href="online.html"><button>Apply Now</button></a>
+      </div>
+      <div class="feature-box">
+      <a href="online.html"><img src="images/workshops.jpg" alt="Part-Time Jobs"></a>
+        <p>Part-Time Jobs</p>
+        <a href="online.html"><button>Apply Now</button></a>
+      </div>
+      <div class="feature-box">
+       <a href="online.html"> <img src="images/internship.jpg" alt="Internships"></a>
+        <p>Internships</p>
+        <a href="online.html"> <button>Apply Now</button></a>
+      </div>
+      <div class="feature-box">
+        <a href="online.html"><img src="images/Freelance Jobs.jpg" alt="Freelance Jobs"></a>
+        <p>Freelance Jobs</p>
+        <a href="online.html"><button>Apply Now</button></a>
+      </div>
+      <div class="feature-box">
+      <a href="online.html"><img src="images/Remote Jobs.jpg" alt="Remote Jobs"></a>
+        <p>Remote Jobs</p>
+        <a href="online.html"><button>Apply Now</button></a>
+      </div>
+      <div class="feature-box">
+        <a href="online.html"><img src="images/Part-Time Internships.jpg" alt="Part-Time Internships"></a>
+        <p>Part-Time Internships</p>
+        <a href="course.html"><button>Apply Now</button></a>
+      </div>
+    </div>
+    <div class="more">
+      <a href="course.html"  target="_blank"><center><button>
+       View All
+      </button></center></a>
+    </div>
+  </div>
+
+
+  
+
+  
+  
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const primarySection = document.querySelector('.primary-section');
+    const featureBoxes = document.querySelectorAll('.feature-box');
+
+    const observerOptions = {
+      root: null, // Use the viewport as the root
+      threshold: 0.1 // Trigger when 10% of the primary section is visible
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          featureBoxes.forEach(box => {
+            box.classList.add('animate'); // Add animation class
+          });
+          observer.unobserve(entry.target); // Stop observing once animated
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    observer.observe(primarySection); // Start observing the primary section
+  });
+</script>
+
+
+
+
+
+<section class="parallax-section">
+  <div class="parallax-content">
+     
+      
+     
+    
+      <p>Limited spots available! Enroll now and start your journey toward success!".</p>
+      <a href="course.html" class="learn-more-btn">Learn More</a>
+  </div>
+</section>
+
+<script>document.addEventListener("DOMContentLoaded", () => {
+const parallaxSection = document.querySelector(".parallax-section");
+const parallaxContent = document.querySelector(".parallax-content");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              parallaxContent.classList.add("visible");
+          }
+      });
+  },
+  {
+      threshold: 0.5, // Trigger when 50% of the section is visible
+  }
+);
+
+observer.observe(parallaxSection);
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<section class="visual-showcase">
+  <h1>Gallery Section</h1>
+  <div class="selection-menu">
+      <button class="active" data-filter="all">ALL</button>
+      <button data-filter="footwear">BEGINNER</button>
+      <button data-filter="athletes">INTERMEDIATE</button>
+      <button data-filter="arenas">ADVANCED</button>
+  </div>
+  
+  <div class="image-collection">
+      <div class="image-box" data-category="athletes">
+          <img src="images/ai.jpg" alt="Athletes">
+      </div>
+      <div class="image-box" data-category="athletes">
+        <img src="images/web.jpg" alt="Athletes">
+    </div>
+    <div class="image-box" data-category="athletes">
+      <img src="images/digital.jpg" alt="Athletes">
+  </div>
+  <div class="image-box" data-category="athletes">
+    <img src="images/data science.jpg" alt="Athletes">
+</div>
+      <div class="image-box" data-category="footwear">
+          <img src="images/Cybersecurity.jpg" alt="Footwear">
+      </div>
+      <div class="image-box" data-category="footwear">
+        <img src="images/skill development.jpg" alt="Footwear">
+    </div>
+    <div class="image-box" data-category="footwear">
+      <img src="images/online education.jpg" alt="Footwear">
+  </div>
+  <div class="image-box" data-category="footwear">
+    <img src="images/graphic.avif" alt="Footwear">
+</div>
+      <div class="image-box" data-category="arenas">
+          <img src="images/Hackathons.jpg" alt="Arenas">
+      </div>
+      <div class="image-box" data-category="arenas">
+        <img src="images/internship.jpg" alt="Arenas">
+    </div>
+    <div class="image-box" data-category="arenas">
+      <img src="images/boot camp.jpg" alt="Arenas">
+  </div>
+  <div class="image-box" data-category="arenas">
+    <img src="images/Cloud Computing.jpg" alt="Arenas">
+</div>
+      <div class="image-box" data-category="athletes">
+          <img src="images/IoT.jpg" alt="More Athletes">
+      </div>
+      <div class="image-box" data-category="athletes">
+        <img src="images/work.jpg" alt="More Athletes">
+    </div>
+    <div class="image-box" data-category="athletes">
+      <img src="images/workshops.jpg" alt="More Athletes">
+  </div>
+  <div class="image-box" data-category="athletes">
+    <img src="images/office.jpg" alt="More Athletes">
+</div>
+
+
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".selection-menu button");
+      const images = document.querySelectorAll(".image-box");
+
+      function applyInitialAnimation() {
+          images.forEach((img, index) => {
+              setTimeout(() => {
+                  img.classList.add("fade-in");
+              }, index * 100);
+          });
+      }
+
+      applyInitialAnimation();
+
+      buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+              buttons.forEach((btn) => btn.classList.remove("active"));
+              button.classList.add("active");
+
+              const filter = button.getAttribute("data-filter");
+
+              images.forEach((img) => {
+                  if (filter === "all" || img.getAttribute("data-category") === filter) {
+                      img.classList.remove("fade-out");
+                      setTimeout(() => img.classList.add("fade-in"), 100);
+                  } else {
+                      img.classList.remove("fade-in");
+                      setTimeout(() => img.classList.add("fade-out"), 100);
+                  }
+              });
+          });
+      });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<section class="about-parallex">
+  <div class="about-overlay"></div>
+  <div class="about-text-wrapper">
+    <div class="testi-clients">
+      <div class="testimonials">
+        
+        <div class="contents-wraper">
+          
+          <section class="header"><h1>Testimonials</h1></section>
+      
+          <section class="testRow">
+            
+            <div class="testItem active">
+              <img src="images/bg.png">
+              <h3>Jane Doe</h3>
+              <h4>San Francisco, USA</h4>
+              <p>  "Absolutely loved the vibrant colors of the Valentine bouquet! It brought a huge smile to my partner’s face. Highly recommended!"</p>
+            </div>
+      
+            <div class="testItem">
+              <img src="images/bg.png">
+              <h3>Jane Doe</h3>
+              <h4>San Francisco, USA</h4>
+              <p>"The heart-shaped floral arrangement was breathtaking! The attention to detail was incredible. I’ll definitely order again!"</p>
+            </div>
+      
+            <div class="testItem">
+              <img src="images/bg.png">
+              <h3>Jane Doe</h3>
+              <h4>San Francisco, USA</h4>
+              <p> "Absolutely loved the vibrant colors of the Valentine bouquet! It brought a huge smile to my partner’s face. Highly recommended!".</p>
+            </div>
+      
+            <div class="testItem">
+              <img src="images/bg.png">
+              <h3>Jane Doe</h3>
+              <h4>San Francisco, USA</h4>
+              <p> "Absolutely loved the vibrant colors of the Valentine bouquet! It brought a huge smile to my partner’s face. Highly recommended!".</p>
+            </div>
+      
+            <div class="testItem">
+              <img src="images/bg.png">
+              <h3>Jane Doe</h3>
+              <h4>San Francisco, USA</h4>
+              <p> "Absolutely loved the vibrant colors of the Valentine bouquet! It brought a huge smile to my partner’s face. Highly recommended!".</p>
+            </div>
+      
+          </section>
+      
+          <section class="indicators">
+            <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+            <div class="dot" attr='1' onclick="switchTest(this)"></div>
+            <div class="dot" attr='2' onclick="switchTest(this)"></div>
+            <div class="dot" attr='3' onclick="switchTest(this)"></div>
+            <div class="dot" attr='4' onclick="switchTest(this)"></div>
+          </section>
+      
+        </div>
+      </div>
+          </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+	
+	// Access the testimonials
+	let testSlide = document.querySelectorAll('.testItem');
+	// Access the indicators
+	let dots = document.querySelectorAll('.dot');
+
+	var counter = 0;
+
+	// Add click event to the indicators
+	function switchTest(currentTest){
+		currentTest.classList.add('active');
+		var testId = currentTest.getAttribute('attr');
+		if(testId > counter){
+			testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+			counter = testId;
+			testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+		}
+		else if(testId == counter){return;}
+		else{
+			testSlide[counter].style.animation = 'prev1 0.5s ease-in forwards';
+			counter = testId;
+			testSlide[counter].style.animation = 'prev2 0.5s ease-in forwards';
+		}
+		indicators();
+	}
+
+	// Add and remove active class from the indicators
+	function indicators(){
+		for(i = 0; i < dots.length; i++){
+			dots[i].className = dots[i].className.replace(' active', '');
+		}
+		dots[counter].className += ' active';
+	}
+
+	// Code for auto sliding
+	function slideNext(){
+		testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+		if(counter >= testSlide.length - 1){
+			counter = 0;
+		}
+		else{
+			counter++;
+		}
+		testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+		indicators();
+	}
+	function autoSliding(){
+		deleteInterval = setInterval(timer, 2000);
+		function timer(){
+			slideNext();
+			indicators();
+		}
+	}
+	autoSliding();
+
+	// Stop auto sliding when mouse is over the indicators
+	const container = document.querySelector('.indicators');
+	container.addEventListener('mouseover', pause);
+	function pause(){
+		clearInterval(deleteInterval);
+	}
+
+	// Resume sliding when mouse is out of the indicators
+	container.addEventListener('mouseout', autoSliding);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+<div class="container">
+  <div class="footer-section">
+ <img src="images/logo.png" alt="Logo" class="logo"> <!-- Add your logo here -->
+    <p>In today's digital world, Avinya is revolutionizing online education by offering flexible, accessible, and high-quality learning experiences Whether you're a student, professional, or lifelong learner, Avinya provides a diverse range of courses tailored to your needs.</p>
+    <div class="social-icons2">
+      <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+     
+     
+      <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+    
+    
+    </div>
+  </div>
+  <div class="footer-links">
+    <h3>Quick Links</h3>
+   <a href="index.html" class="fot"><p>HOME</p></a>
+   <a href="about.html" class="fot"><p>ABOUT US</p></a>
+   <a href="course.html" class="fot"><p>COURSES</p></a>
+    <a href="events.html" class="fot"><p>EVENTS</p></a>
+  <a href="contact.html" class="fot"><p>CONTACT</p></a>
+  </div>
+  <div class="footer-section">
+    <h3>Our Address</h3>
+    <p>PRAJAY PRINCETON TOWERS, #502, 5th Floor, Hyderabad, Telangana-500035</p>
+    <p><i class="fa-solid fa-phone"></i> <span> +91 8247547854</span></p>
+    <p><i class="fa fa-envelope"></i> <a href="Advoize2023@gmail.com">Advoize2023@gmail.com</a></p>
+  </div>
+  <div class="footer-section">
+    <h3>Newsletter</h3>
+    <p>Receive the latest news from us.</p>
+    <form>
+      <input type="email" placeholder="Your Email Address" required>
+      <button type="submit">Subscribe</button>
+      <div>
+        <input type="checkbox" id="privacy" required>
+        <label for="privacy">I agree to the Privacy Policy</label>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>Copyright© 2025 Avinya, All rights reserved. Powered by Advoize. </p>
+ 
+  
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

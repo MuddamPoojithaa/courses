@@ -1,0 +1,330 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Section Styling */
+  .contact-section {
+    padding: 80px 20px;
+    background: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: flex-start;
+  }
+  
+  /* Contact Info Section */
+  .contact-info1 {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+  
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .contact-info1 h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .contact-info1 p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info1 strong {
+    color: #ffcc00;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    
+    
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons .icon:hover {
+    transform: scale(1.2);
+    
+    color:black;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    flex: 1;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+    animation: slideIn 1.5s ease;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Input Fields */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #1e3c72;
+    outline: none;
+    box-shadow: 0 0 8px rgba(30, 60, 114, 0.3);
+  }
+  
+  /* Buttons */
+  .contact-form button {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background: #ffcc00;
+    color: #333;
+    transform: scale(1.05);
+  }
+  
+  /* Align Buttons */
+  .contact-form .form-group.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .contact-form .form-group.buttons button {
+    flex: 1;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+
+    
+    .contact-info,
+    .contact-form {
+      flex: none;
+      width: 100%;
+    }
+  
+    .contact-info h2 {
+      font-size: 24px;
+    }
+  }
+  
+
+  
+  
+  
+  /* Google Map Section */
+  .google-map-section {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    height: 100vh; /* Responsive height (50% of viewport height) */
+  }
+  
+  .map-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    position: relative;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .google-map-section {
+      height: 60vh; /* Increase height for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .google-map-section {
+      height: 70vh; /* Increase height further for very small screens */
+    }
+  }
+  
+
+
+
+  /* Banner Area Styles */
+.banner-area {
+    position: relative;
+    height: 90vh; /* Full-screen height */
+    background: url('/images/online-course-of-study.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark Overlay Styles */
+.dark-overlay {
+    position: absolute;
+    inset: 0; /* Covers the entire container */
+    background: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+    z-index: 1;
+}
+
+/* Content Wrapper Styles */
+.content-wrapper {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    margin-top: -10px;
+}
+
+/* Headline Styles */
+.headline {
+    font-size: 60px;
+    font-weight: bold;
+    color:white;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-2000px);
+    transition: opacity 1s ease, transform 1s ease; /* Transition effects */
+}
+
+/* Sub Text Styles */
+.sub-text {
+    font-size: 35px;
+    font-family: "Arial", sans-serif;
+    font-weight: 600;
+    color:white;
+    margin-top: 10px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(200px);
+    transition: opacity 1s ease, transform 1s ease; /* Transition effects */
+}
+
+/* Display Headline Styles */
+.display-headline {
+    opacity: 1;
+    transform: translateY(0); /* Final state */
+}
+
+/* Display Sub Text Styles */
+.display-subtext {
+    opacity: 1;
+    transform: translateY(0); /* Final state */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .headline {
+        font-size: 50px; /* Adjust font size for medium screens */
+    }
+    
+    .sub-text {
+        font-size: 40px; /* Adjust font size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-area {
+        height: 80vh; /* Adjust height for smaller screens */
+    }
+
+    .headline {
+        font-size: 40px; /* Adjust font size for small screens */
+    }
+
+    .sub-text {
+        font-size: 30px; /* Adjust font size for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-area {
+        height: 60vh; /* Adjust height for extra small screens */
+    }
+
+    .headline {
+        font-size: 30px; /* Further adjust font size for extra small screens */
+    }
+
+    .sub-text {
+        font-size: 25px; /* Further adjust font size for extra small screens */
+    }
+}
